@@ -1,0 +1,88 @@
+{
+  "region": "us-east-1",
+  "cognito": {
+    "poolId": "us-east-1:ca227e71-f672-4cd8-b544-9ba82086018f",
+    "appUserPoolClientId": "5avr70mllabr9qqvmhk1aqucl2",
+    "appUserPoolName": "us-east-1_87hxdov2X",
+    "appDomainName": "lexkwebkuikidentitypoolconfigkbgadhwjffzyix905418487788.auth.us-east-1.amazoncognito.com",
+    "aws_cognito_region": "us-east-1",
+    "region": "us-east-1"
+  },
+  "connect": {
+    "contactFlowId": "",
+    "instanceId": "",
+    "apiGatewayEndpoint": "",
+    "promptForNameMessage": "Before starting a live chat, please tell me your name?",
+    "waitingForAgentMessage": "Thanks for waiting. An agent will be with you when available.",
+    "waitingForAgentMessageIntervalSeconds": "60",
+    "agentJoinedMessage": "{Agent} has joined.",
+    "agentLeftMessage": "{Agent} has left.",
+    "chatEndedMessage": "Chat ended.",
+    "attachChatTranscript": "false",
+    "liveChatTerms": "live chat",
+    "transcriptMessageDelayInMsec": "150"
+  },
+  "lex": {
+    "v2BotId": "LZ1UHA36O9",
+    "v2BotAliasId": "WUINWH5FLC",
+    "v2BotLocaleId": "en_US",
+    "botName": "LZ1UHA36O9",
+    "botAlias": "$LATEST",
+    "initialText": "Hi, I am Irrigation Bot. I can help you with Activation or De-activation of electricity connection",
+    "initialSpeechInstruction": "Say 'Activate Water Connection' to get started.",
+    "initialUtterance": "",
+    "reInitSessionAttributesOnRestart": false,
+    "region": "us-east-1",
+    "retryOnLexPostTextTimeout": "false",
+    "retryCountPostTextTimeout": "1",
+    "allowStreamingResponses": false,
+    "streamingWebSocketEndpoint": "",
+    "streamingDynamoDbTable": ""
+  },
+  "ui": {
+    "parentOrigin": "http://localhost:8080",
+    "toolbarTitle": "Irrigation Bot",
+    "toolbarLogo": "",
+    "toolbarStartLiveChatLabel": "Start Live Chat",
+    "toolbarEndLiveChatLabel": "End Live Chat",
+    "toolbarStartLiveChatIcon": "people_alt",
+    "toolbarEndLiveChatIcon": "call_end",
+    "positiveFeedbackIntent": "",
+    "negativeFeedbackIntent": "",
+    "helpIntent": "Help",
+    "minButtonContent": "",
+    "avatarImageUrl": "",
+    "backButton": false,
+    "messageMenu": false,
+    "hideButtonMessageBubble": false,
+    "enableLogin": false,
+    "enableLiveChat": false,
+    "forceLogin": false,
+	  "uploadRequireLogin": false,
+    "enableUpload": true,
+    "uploadS3BucketName": "upload-document-from-boat",
+    "AllowSuperDangerousHTMLInMessage": true,
+    "shouldDisplayResponseCardTitle": false,
+    "saveHistory": false,
+    "helpContent": {},
+    "enableSFX": false,
+    "hideInputFieldsForButtonResponse": false,
+    "pushInitialTextOnRestart": false,
+    "directFocusToBotInput": false,
+    "showDialogStateIcon": false,
+	"uploadSuccessMessage": "Document uploaded successfully.",
+	"uploadFailureMessage": "Failed to upload document. Please try after some time.",
+	"toolbarColor": "blue"	
+  },
+  "polly": {
+    "voiceId": "Salli"
+  },
+  "recorder": {
+    "preset": "speech_recognition"
+  },
+  "iframe": {
+    "iframeOrigin": "https://d3ilghc42ct3me.cloudfront.net",
+    "shouldLoadIframeMinimized": false,
+    "iframeSrcPath": "/index.html#/?lexWebUiEmbed=true"
+  }
+}
