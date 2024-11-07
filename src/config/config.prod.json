@@ -28,7 +28,7 @@
     "v2BotLocaleId": "en_US",
     "botName": "LZ1UHA36O9",
     "botAlias": "$LATEST",
-    "initialText": "Hi, I am Irrigation Bot. I can help you with Activation or De-activation of electricity connection",
+    "initialText": "Hi, I am Lathrop Irrigation Bot. I can help you with Activation or De-activation of electricity connection",
     "initialSpeechInstruction": "Say 'Activate Water Connection' to get started.",
     "initialUtterance": "",
     "reInitSessionAttributesOnRestart": false,
@@ -41,7 +41,7 @@
   },
   "ui": {
     "parentOrigin": "",
-    "toolbarTitle": "Irrigation Bot",
+    "toolbarTitle": "Lathrop Bot",
     "toolbarLogo": "",
     "toolbarStartLiveChatLabel": "Start Live Chat",
     "toolbarEndLiveChatLabel": "End Live Chat",
@@ -72,7 +72,7 @@
     "showDialogStateIcon": false,
 	"uploadSuccessMessage": "Document uploaded successfully.",
 	"uploadFailureMessage": "Failed to upload document. Please try after some time.",
-	"toolbarColor": "blue"	
+	"toolbarColor": "#0D47A1"	
   },
   "polly": {
     "voiceId": "Salli"

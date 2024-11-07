@@ -604,14 +604,15 @@ export default {
 }
 
 .message-bot .message-bubble {
-  background-color: #FFEBEE; /* red-50 from material palette */
+  background-color: #7ec8e3; /* red-50 from material palette */
 }
 
 .message-agent .message-bubble {
-  background-color: #FFEBEE; /* red-50 from material palette */
+  background-color: #7ec8e3; /* red-50 from material palette */
 }
 .message-human .message-bubble {
-  background-color: #E8EAF6; /* indigo-50 from material palette */
+  /* background-color: #E8EAF6;  */
+  background-color: #36eee0; /* indigo-50 from material palette */
 }
 
 .message-feedback .message-bubble {

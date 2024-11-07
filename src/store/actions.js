@@ -29,6 +29,7 @@ import silentMp3 from '@/assets/silent.mp3';
 import LexClient from '@/lib/lex/client';
 
 import { jwtDecode } from "jwt-decode";
+import DOMPurify from 'dompurify';
 const AWS = require('aws-sdk');
 
 // non-state variables that may be mutated outside of store
@@ -1297,7 +1298,22 @@ export default {
  *
  **********************************************************************/
   uploadFile(context, file) {
-    const s3 = new AWS.S3({
+    var shouldUpload = true;
+    const match = file.name.match(/\.([^.]+)$/);
+    const extension = match ? match[1] : '';
+    const acceptedExtensions = ['jpeg', 'pdf', 'doc'];
+    if (!acceptedExtensions.includes(extension)) {
+      const message = {
+        type: 'bot',
+        text: 'Please upload file of type JPEG, PDF or DOC',
+      };
+      
+      context.dispatch('postTextMessage', message);
+      shouldUpload = false;
+    }
+    if(shouldUpload)  {
+      const s3 
+    = new AWS.S3({
       credentials: awsCredentials
     });
     //Create a key that is unique to the user & time of upload
@@ -1344,9 +1360,10 @@ export default {
               type: 'bot',
               text: `${context.state.config.ui.uploadSuccessMessage}. FileName : ${file.name}`,
             });
+            const sanitizedHtml = DOMPurify.sanitize(`<html><body>Your LID Account number is <b>L-${Math.random().toString(36).slice(2)}</b>. Please save it for future communications.</body></html>`);
             context.commit('pushMessage', {
               type: 'bot',
-              text: `<html><body>Your LID Account number is <b>L-${Math.random().toString(36).slice(2)}</b>. Please save it for future communications.</body></html>`,
+              text: sanitizedHtml,
             });
           }
 
@@ -1365,5 +1382,7 @@ export default {
         return Promise.resolve();
       }
     });
+    }
+    
   },
 };

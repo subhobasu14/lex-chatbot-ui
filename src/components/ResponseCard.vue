@@ -123,6 +123,10 @@ export default {
   display: inline-block;
 }
 
+.button-column {
+  display: block;
+}
+
 .v-card-actions .v-btn {
   margin: 4px 4px;
   font-size: 1em;
@@ -133,4 +137,10 @@ export default {
   justify-content: center;
   padding-bottom: 0.15em;
 }
+
+.v-card-actions.button-column {
+  justify-content: center;
+  padding-bottom: 0.15em;
+}
+
 </style>

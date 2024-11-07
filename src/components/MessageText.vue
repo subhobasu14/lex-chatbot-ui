@@ -16,6 +16,11 @@
     class="message-text"
   ></div>
   <div
+    v-else-if="pushMessage.text && pushMessage.type === 'bot' && pushMessage.text.includes('body')"
+    v-html="pushMessage.text"
+    class="message-text"
+  ></div>
+  <div
     v-else-if="message.text && (message.type === 'bot' || message.type === 'agent')"
     class="message-text bot-message-plain"
   >

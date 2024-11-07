@@ -3,6 +3,7 @@
     aria-live="polite"
     class="layout message-list column fill-height"
   >
+    
     <message
       ref="messages"
       v-for="message in messages"
@@ -14,6 +15,9 @@
     <MessageLoading
       v-if="loading"
     ></MessageLoading>
+    <div>
+      <date-picker v-if="isDateRequested" :style="{ width: '200px', paddingTop: '20px'}"></date-picker>
+    </div>
   </div>
 </template>
 
@@ -32,14 +36,24 @@ License for the specific language governing permissions and limitations under th
 */
 import Message from './Message';
 import MessageLoading from './MessageLoading';
+import DatePicker from "./DatePicker";
 
 export default {
   name: 'message-list',
   components: {
     Message,
     MessageLoading,
+    DatePicker,
   },
   computed: {
+    isDateRequested(){
+      console.log("this.$store.state.lex.sessionState?.dialogAction?.subSlotToElicit?.name == 'DeactivationDate' ", this.$store.state.lex.sessionState?.dialogAction?.subSlotToElicit?.name == 'DeactivationDate')
+
+      console.log("Slots ==== ", this.$store.state.lex.sessionState?.dialogAction)
+      return (this.$store.state.lex.sessionState?.dialogAction?.subSlotToElicit?.name == 'DeactivationDate' || this.$store.state.lex.sessionState?.dialogAction?.slotToElicit == 'NewConnection');
+      
+
+    },
     messages() {
       return this.$store.state.messages;
     },
@@ -65,6 +79,7 @@ export default {
     }, 1000);
   },
   methods: {
+    
     scrollDown() {
       return this.$nextTick(() => {
         if (this.$el.lastElementChild) {

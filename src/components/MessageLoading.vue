@@ -55,9 +55,9 @@ export default {
   created() {
     this.interval = setInterval(() => {
       if (this.progress.length > 2) {
-        this.progress = '.';
+        this.progress = '..';
       } else {
-        this.progress += '.';
+        this.progress += '..';
       }
     }, 500);
   },
