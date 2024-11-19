@@ -1,10 +1,10 @@
 {
   "region": "us-east-1",
   "cognito": {
-    "poolId": "us-east-1:ca227e71-f672-4cd8-b544-9ba82086018f",
-    "appUserPoolClientId": "5avr70mllabr9qqvmhk1aqucl2",
-    "appUserPoolName": "us-east-1_87hxdov2X",
-    "appDomainName": "lexkwebkuikidentitypoolconfigkbgadhwjffzyix905418487788.auth.us-east-1.amazoncognito.com",
+    "poolId": "us-east-1:e279515c-3a9b-493b-8d1c-c9938a841f7a",
+    "appUserPoolClientId": "46kl1tc288kh4d5ts33fei8epb",
+    "appUserPoolName": "us-east-1_8fYah89G3",
+    "appDomainName": "lexkwebkuikckidentitypoolconfigkbctgeqrwqbd905418487788.auth.us-east-1.amazoncognito.com",
     "aws_cognito_region": "us-east-1",
     "region": "us-east-1"
   },
