@@ -1,10 +1,10 @@
 {
   "region": "us-east-1",
   "cognito": {
-    "poolId": "us-east-1:e279515c-3a9b-493b-8d1c-c9938a841f7a",
-    "appUserPoolClientId": "46kl1tc288kh4d5ts33fei8epb",
-    "appUserPoolName": "us-east-1_8fYah89G3",
-    "appDomainName": "lexkwebkuikckidentitypoolconfigkbctgeqrwqbd905418487788.auth.us-east-1.amazoncognito.com",
+    "poolId": "us-east-1:1cf4d265-2c0d-443d-a1ae-c3bfbb33316c",
+    "appUserPoolClientId": "4jltrcan3vgh2nmvitp18em9pi",
+    "appUserPoolName": "us-east-1_TPpKz8o1T",
+    "appDomainName": "lexkwebkuikidentitypoolconfigksfbieiiciieu405894845066.auth.us-east-1.amazoncognito.com",
     "aws_cognito_region": "us-east-1",
     "region": "us-east-1"
   },
@@ -23,10 +23,10 @@
     "transcriptMessageDelayInMsec": "150"
   },
   "lex": {
-    "v2BotId": "LZ1UHA36O9",
-    "v2BotAliasId": "WUINWH5FLC",
+    "v2BotId": "QJFAS0RXY7",
+    "v2BotAliasId": "PDB3NOWXCL",
     "v2BotLocaleId": "en_US",
-    "botName": "LZ1UHA36O9",
+    "botName": "QJFAS0RXY7",
     "botAlias": "$LATEST",
     "initialText": "Hi, I am Lathrop Irrigation Bot. I can help you with Activation or De-activation of electricity connection",
     "initialSpeechInstruction": "Say 'Activate Water Connection' to get started.",
@@ -60,7 +60,7 @@
     "forceLogin": false,
 	  "uploadRequireLogin": false,
     "enableUpload": true,
-    "uploadS3BucketName": "upload-document-from-boat",
+    "uploadS3BucketName": "upload-document-from-bot",
     "AllowSuperDangerousHTMLInMessage": true,
     "shouldDisplayResponseCardTitle": false,
     "saveHistory": false,

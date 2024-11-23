@@ -24,16 +24,16 @@ export default {
   },
   methods: {
     handleDate(modelData) {
-      console.log("modelData selected from function is ==========  ", modelData);
-      this.date.value = modelData;
-      console.log("Date selected from function is ==========  ", this.date.value);
-      // do something else with the data
-      const message = {
+      console.log("Date selected from function is ==========  ", modelData);
+      if (modelData)  {
+        const message = {
         type: 'human',
-        text: modelData.toDateString()
+        text: modelData?.toDateString()
       };
       this.$store.dispatch('postTextMessage', message)
-      },
+      }
+      
+    },
   },
 };
 </script>
